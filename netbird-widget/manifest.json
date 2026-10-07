@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "local.netbird-widget",
+  "name": "NetBird Widget",
+  "version": "1.0.0",
+  "author": "Local",
+  "license": "MIT",
+  "description": "NetBird status, peers, and explicit connection controls for the Omarchy bar.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "NetBird",
+    "description": "Show NetBird connection status, peer summary, and explicit connect/disconnect controls.",
+    "category": "Network",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "refreshIntervalSec": 30
+    },
+    "schema": [
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 5,
+        "max": 3600,
+        "step": 5,
+        "defaultValue": 30
+      }
+    ]
+  }
+}
